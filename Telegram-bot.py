@@ -18,7 +18,7 @@ category = {}
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
-    sti = open('C:/Users/nebop/PycharmProjects/pythonProject/My_progect/BatmanComics_023.webp', 'rb')
+    sti = open('sticker/BatmanComics_023.webp', 'rb')
     bot.send_sticker(message.chat.id, sti)
     bot.send_message(message.chat.id, f"<b>Здороу був :-) {message.from_user.first_name} </b> \nКажи що хтівмсь...",
                      parse_mode='html')
@@ -41,11 +41,11 @@ def get_text_messages(message):
             i += 2
         bot.send_message(message.chat.id, f'Вибери категорію картинок', reply_markup=keyboard)
     elif message.text.lower() == 'ні' and 'ніт' and 'не хочу':
-        sti = open('C:/Users/nebop/PycharmProjects/pythonProject/My_progect/BatmanComics_011.webp', 'rb')
+        sti = open('sticker/BatmanComics_011.webp', 'rb')
         bot.send_sticker(message.chat.id, sti)
         bot.send_message(message.chat.id, 'Жуй сраку...))')
     elif message.text.lower() == 'папа' and 'бувай':
-        sti2 = open('C:/Users/nebop/PycharmProjects/pythonProject/My_progect/BatmanComics_024.webp', 'rb')
+        sti2 = open('sticker/BatmanComics_024.webp', 'rb')
         bot.send_sticker(message.chat.id, sti2)
         bot.send_message(message.chat.id, "Я умиваюсь звідсика поки поштарка Оксана не прийшла.....")
     elif message.text:
